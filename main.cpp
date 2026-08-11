@@ -7,6 +7,8 @@
 #include <cstdio>
 #include <vector>
 #include <sys/wait.h>
+#include <filesystem>
+
 
 int main() {
   // Flush output immediately so the shell prompt appears correctly
@@ -31,8 +33,11 @@ int main() {
 
       std::string command = user_input.substr(5);
 
-      if (command == "exit" || command == "echo" || command == "type") {
+      if (command == "exit" || command == "echo" || command == "type" || command == "pwd") {
         std::cout << command << " is a shell builtin" << std::endl;
+      }
+      else if (command == "pwd"){
+        std::cout <<std::filesystem::current_path()<<std::endl;
       }
 
       else {

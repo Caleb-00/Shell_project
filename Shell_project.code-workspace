@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"name": "codecrafters-shell-cpp",
+			"path": "../codecrafters-shell-cpp"
+		}
+	],
+	"settings": {}
+}
